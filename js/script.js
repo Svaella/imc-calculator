@@ -1,5 +1,3 @@
-// script.js
-
 let currentUnit = 'metric';
 let imcHistory = JSON.parse(localStorage.getItem('imcHistory')) || [];
 
