@@ -1,0 +1,131 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC - Índice de Masa Corporal</title>
+    <meta name="description" content="Calcula tu Índice de Masa Corporal (IMC) y recibe recomendaciones personalizadas para tu salud.">
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado principal -->
+        <header class="header">
+            <h1>🏥 Calculadora de IMC</h1>
+            <p>Descubre tu Índice de Masa Corporal y recibe recomendaciones personalizadas</p>
+        </header>
+
+        <!-- Contenido principal dividido en dos columnas -->
+        <div class="main-content">
+            <!-- Sección de la calculadora -->
+            <div class="calculator-section">
+                <h2 class="section-title">Calculadora</h2>
+
+                <div class="unit-toggle">
+                    <button type="button" class="active" onclick="toggleUnit('metric')">Métrico</button>
+                    <button type="button" onclick="toggleUnit('imperial')">Imperial</button>
+                </div>
+
+                <form id="imcForm">
+                    <!-- Campo: altura -->
+                    <div class="form-group">
+                        <label for="height">Altura</label>
+                        <div class="input-group">
+                            <input type="number" id="height" step="0.01" min="0" required>
+                            <span class="unit" id="heightUnit">cm</span>
+                        </div>
+                    </div>
+
+                    <!-- Campo: peso -->
+                    <div class="form-group">
+                        <label for="weight">Peso</label>
+                        <div class="input-group">
+                            <input type="number" id="weight" step="0.1" min="0" required>
+                            <span class="unit" id="weightUnit">kg</span>
+                        </div>
+                    </div>
+
+                    <!-- Campo: edad (opcional) -->
+                    <div class="form-group">
+                        <label for="age">Edad (opcional)</label>
+                        <div class="input-group">
+                            <input type="number" id="age" min="1" max="120">
+                            <span class="unit">años</span>
+                        </div>
+                    </div>
+
+                    <!-- Campo: género (opcional) -->
+                    <div class="form-group">
+                        <label for="gender">Género (opcional)</label>
+                        <select id="gender">
+                            <option value="">Seleccionar</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Femenino</option>
+                        </select>
+                    </div>
+
+                    <!-- Botón de cálculo -->
+                    <button type="submit" class="calculate-btn">Calcular IMC</button>
+                </form>
+
+                <!-- Resultados del cálculo -->
+                <div id="result" class="result-container">
+                    <div class="imc-value" id="imcValue"></div>
+                    <div class="imc-category" id="imcCategory"></div>
+                    <div class="recommendations" id="recommendations"></div>
+                </div>
+            </div>
+
+            <!-- Sección informativa sobre el IMC -->
+            <div class="info-section">
+                <h2 class="section-title">¿Qué es el IMC?</h2>
+                <p>El Índice de Masa Corporal (IMC) es una medida que relaciona tu peso y altura...</p>
+                <!-- Rangos -->
+                <h3>Rangos de IMC:</h3>
+                <div class="imc-range-list">
+                    <div class="imc-range" style="background: #bee3f8;">Bajo peso: &lt; 18.5</div>
+                    <div class="imc-range" style="background: #c6f6d5;">Normal: 18.5 - 24.9</div>
+                    <div class="imc-range" style="background: #fbb6ce;">Sobrepeso: 25.0 - 29.9</div>
+                    <div class="imc-range" style="background: #feb2b2;">Obesidad: ≥ 30.0</div>
+                </div>
+
+                <!-- Historial de cálculos -->
+                <div class="history-section">
+                    <h3>Historial de Cálculos</h3>
+                    <div id="history"></div>
+                    <button class="clear-history" onclick="clearHistory()">Limpiar Historial</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico visual -->
+        <div class="chart-container">
+            <h2 class="section-title">Visualización de Rangos IMC</h2>
+            <canvas id="imcChart"></canvas>
+        </div>
+
+        <!-- Tarjetas de consejos adicionales -->
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>💪 Consejos de Ejercicio</h3>
+                <p>El ejercicio regular es fundamental para mantener un peso saludable...</p>
+            </div>
+            <div class="info-card">
+                <h3>🥗 Alimentación Balanceada</h3>
+                <p>Una dieta equilibrada rica en frutas, verduras, proteínas magras...</p>
+            </div>
+            <div class="info-card">
+                <h3>🏥 Consulta Médica</h3>
+                <p>El IMC es una herramienta de evaluación, pero no considera factores como masa muscular...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script externo -->
+    <script src="js/script.js"></script>
+</body>
+</html>
