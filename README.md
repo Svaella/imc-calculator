@@ -5,7 +5,7 @@ Este proyecto es una **calculadora web interactiva** que permite a los usuarios 
 ---
 
 ## 🌐 Demo
-> (Agrega aquí el enlace a Netlify, Vercel o GitHub Pages si ya lo publicaste)
+https://imc-calculator-health.netlify.app/
 
 ---
 
@@ -51,19 +51,14 @@ git clone https://github.com/tuusuario/imc_calculator.git
 
 ---
 
-## 📸 Capturas de Pantalla
-> Puedes añadir imágenes en `assets/images/` y enlazarlas aquí con Markdown.
-
----
-
 ## 📄 Licencia
 Este proyecto se distribuye bajo la licencia MIT. Eres libre de utilizarlo, modificarlo y compartirlo.
 
 ---
 
 ## ✍️ Autor
-- **[Tu Nombre]** – Desarrollador Web
-- 📧 contacto: tuemail@example.com
+- **Sergio** – Desarrollador Web
+- 📧 contacto: sergio.vh2806@gmail.com
 
 ---
 
