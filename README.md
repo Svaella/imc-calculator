@@ -51,15 +51,9 @@ git clone https://github.com/tuusuario/imc_calculator.git
 
 ---
 
-## 📄 Licencia
-Este proyecto se distribuye bajo la licencia MIT. Eres libre de utilizarlo, modificarlo y compartirlo.
-
----
-
 ## ✍️ Autor
 - **Sergio** – Desarrollador Web
 - 📧 contacto: sergio.vh2806@gmail.com
 
 ---
 
-¿Te gustaría que también genere un logo básico o una imagen ilustrativa para colocarlo en `assets/images`?
